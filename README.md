@@ -33,4 +33,15 @@ In another terminal:
 ```
 rosbag play <bag name> <topic name>:=<new topic name>
 ```
-
+## Rename a frame id
+Install [bag-tools](http://wiki.ros.org/bag_tools) from `srv_tools` ros repo.
+```
+cd ~/catkin_ws/src
+git clone https://github.com/srv/srv_tools
+cd ..
+catkin build
+```
+In the terminal:
+```
+rosrun bag_tools change_frame_id.py -o <out bag> -i <in bag> -f <frame_id> -t <topic>
+```
